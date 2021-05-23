@@ -19,4 +19,5 @@ data class MyResult <out T>(val status: Status, val data: T?, val message: Strin
 
     }
 
-}*/
+}
+*/

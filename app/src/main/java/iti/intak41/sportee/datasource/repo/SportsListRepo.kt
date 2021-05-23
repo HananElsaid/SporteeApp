@@ -5,8 +5,10 @@ import iti.intak41.sportee.datasource.model.SportsResponse
 import iti.intak41.sportee.datasource.remote.SportsAPIClient
 import iti.intak41.sportee.datasource.remote.SportsService
 import retrofit2.Response
+import javax.inject.Inject
 
-class SportsListRepo(var sportsServie: SportsService) {
+class SportsListRepo @Inject constructor(var sportsServie: SportsService) {
+
     suspend fun getSportsList(): Response<SportsResponse> {
       /*  val response = sportsServie.getSports()
         if (response.isSuccessful){

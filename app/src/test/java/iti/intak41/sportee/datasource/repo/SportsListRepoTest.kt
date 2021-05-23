@@ -43,7 +43,6 @@ class SportsListRepoTest {
 
         runBlocking {
             `when`(sportsService.getSports()).thenReturn(Response.success(respo))
-
             val sportsList1 = repo.getSportsList()
             if (sportsList1.isSuccessful) {
                 val body = sportsList1.body()?.sports
